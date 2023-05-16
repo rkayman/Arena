@@ -72,9 +72,9 @@ extension Arena {
 
 
 extension Arena {
-    var dependencyPackagePath: Path { outputPath/depdencyPackageName }
+    var dependencyPackagePath: Path { outputPath/dependencyPackageName }
 
-    var depdencyPackageName: String { "Dependencies" }
+    var dependencyPackageName: String { "ArenaDependencies" }
 
     var xcworkspacePath: Path { outputPath/"Playground.xcworkspace" }
 
@@ -165,7 +165,7 @@ extension Arena {
             let packageDescription = try String(contentsOf: packagePath)
             let updatedTgts =  """
                 package.targets = [
-                    .target(name: "\(depdencyPackageName)",
+                    .target(name: "\(dependencyPackageName)",
                         dependencies: [
                             \(PackageGenerator.productsClause(packageInfo))
                         ]
@@ -199,7 +199,7 @@ extension Arena {
                 location = "group:\(playgroundFilename)">
                 </FileRef>
                 <FileRef
-                location = "group:\(depdencyPackageName)">
+                location = "group:\(dependencyPackageName)">
                 </FileRef>
                 </Workspace>
                 """.write(to: xcworkspacePath/"contents.xcworkspacedata")

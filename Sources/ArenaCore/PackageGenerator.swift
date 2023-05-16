@@ -84,7 +84,8 @@ extension PackageGenerator {
 
     static func content(libraries: [String]) -> String {
         """
-        // Playground generated with 🏟 Arena (https://github.com/finestructure/arena)
+        // Playground generated with 🏟 Arena (https://github.com/rkayman/arena)
+        //      which was forked, with gratitude, from (https://github.com/finestructure/arena)
         // ℹ️ If running the playground fails with an error "No such module"
         //    go to Product -> Build to re-trigger building the SPM package.
         // ℹ️ Please restart Xcode if autocomplete is not working.
